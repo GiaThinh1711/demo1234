@@ -4,11 +4,19 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>MyServlet</servlet-name>
-        <servlet-class>controller.MyServlet</servlet-class>
+        <servlet-name>CreateStudent</servlet-name>
+        <servlet-class>controller.CreateStudent</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MyServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>CreateStudent</servlet-name>
+        <url-pattern>/students/create</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListStudent</servlet-name>
+        <servlet-class>controller.ListStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListStudent</servlet-name>
+        <url-pattern>/students/list</url-pattern>
     </servlet-mapping>
 </web-app>
