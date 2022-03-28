@@ -15,8 +15,8 @@ public class StudentModel {
     public boolean save(Student student) {
         ConnectionHelper connectionHelper = new ConnectionHelper();
         try {
-            Connection connetion = connectionHelper.getConnection();
-            Statement statement = connetion.createStatement();
+            Connection connection = connectionHelper.getConnection();
+            Statement statement = connection.createStatement();
             String sql = "insert into student (id, rollNumber, email, name) values (1, 'A002', 'hung@gmail.com', 'Hung')";
             String sqlStatement =
                     String.format("insert into student (id, rollNumber, email, name) values (%d, '%s', '%s', '%s')",
@@ -48,14 +48,8 @@ public class StudentModel {
                 listStudent.add(student);
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
         return listStudent;
-    }
-
-    public static void main(String[] args) {
-        String sql = String.format("insert into student (id, rollNumber, email, name) values (%d, '%s', '%s', '%s')", 1, "A003", "Hung", "hung");
-
-        System.out.println(sql);
     }
 }

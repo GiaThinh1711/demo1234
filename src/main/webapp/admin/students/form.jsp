@@ -14,7 +14,7 @@
     <h2 style="text-align:center">Create Students Here</h2>
     <div class="form-group">
         <label>Id</label>
-        <input id="number" name="id" class="form-control" >
+        <input type="number" name="id" class="form-control" >
     </div>
     <div class="form-group">
         <label>Roll Number</label>

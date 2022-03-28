@@ -19,6 +19,7 @@
     <h1>List Student</h1>
     <thead class="thead-light">
     <tr>
+        <th scope="col">Id</th>
         <th scope="col">Roll Number</th>
         <th scope="col">Email</th>
         <th scope="col">Name</th>
@@ -31,6 +32,7 @@
 
     %>
     <tr>
+        <td><%=st.getId()%></td>
         <td><%=st.getRollNumber()%></td>
         <td><%=st.getEmail()%></td>
         <td><%=st.getName()%></td>

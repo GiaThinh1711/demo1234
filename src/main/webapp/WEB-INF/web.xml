@@ -19,4 +19,44 @@
         <servlet-name>ListStudent</servlet-name>
         <url-pattern>/students/list</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateProductServlet</servlet-name>
+        <servlet-class>controller.product.CreateProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateProductServlet</servlet-name>
+        <url-pattern>/products/create</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetListProductServlet</servlet-name>
+        <servlet-class>controller.product.GetListProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetListProductServlet</servlet-name>
+        <url-pattern>/products/list</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>controller.product.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/products/delete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <servlet-class>controller.product.UpdateProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <url-pattern>/products/update</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ProductDetailServlet</servlet-name>
+        <servlet-class>controller.product.ProductDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductDetailServlet</servlet-name>
+        <url-pattern>/products/detail</url-pattern>
+    </servlet-mapping>
 </web-app>
