@@ -13,6 +13,7 @@ import java.util.List;
 public class GetListProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setCharacterEncoding("UTF-8");
         ProductModel model = new ProductModel();
         List<Product> listObj = model.findAll();
         req.setAttribute("listObj",listObj);

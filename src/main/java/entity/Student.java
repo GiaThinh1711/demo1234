@@ -6,7 +6,7 @@ public class Student {
     private String email;
     private String name;
 
-    public Student() {
+    public Student(String rollNumber, String email, String name, int status) {
     }
 
     public Student(int id, String rollNumber, String email, String name) {

@@ -2,7 +2,6 @@ package util;
 
 import annotation.Column;
 import annotation.Table;
-import javafx.scene.effect.Reflection;
 import org.reflections.Reflections;
 
 import java.lang.reflect.Field;

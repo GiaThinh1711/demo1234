@@ -13,7 +13,7 @@ public class DeleteProductServlet extends HttpServlet {
     private ProductModel model = new ProductModel();
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         Product obj = model.findById(id);
         if (obj == null) {

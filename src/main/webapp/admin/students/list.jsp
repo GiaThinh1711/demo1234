@@ -23,6 +23,7 @@
         <th scope="col">Roll Number</th>
         <th scope="col">Email</th>
         <th scope="col">Name</th>
+        <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -36,6 +37,7 @@
         <td><%=st.getRollNumber()%></td>
         <td><%=st.getEmail()%></td>
         <td><%=st.getName()%></td>
+        <td><a href="/students/delete?id=${st.getId()}"><button >Delete</button></a></td>
     </tr>
     <%}%>
     </tbody>

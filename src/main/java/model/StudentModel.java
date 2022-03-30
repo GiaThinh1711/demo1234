@@ -3,10 +3,7 @@ package model;
 import entity.Student;
 import util.ConnectionHelper;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,5 +48,38 @@ public class StudentModel {
             e.printStackTrace();
         }
         return listStudent;
+    }
+    public Student findById(int id) {
+        Student obj = null;
+        try {
+            Connection connection = ConnectionHelper.getConnection();
+            PreparedStatement statement = connection.prepareStatement("select * from student where id = ?") ;
+            statement.setInt(1,id);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                String name = rs.getString("name");
+                String rollNumber = rs.getString("rollNumber");
+                String email = rs.getString("email");
+                obj = new Student(id, rollNumber, email, name);
+            }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        return  obj;
+    }
+    public boolean delete(int id){
+        ConnectionHelper connectionHelper = new ConnectionHelper();
+        try {
+            Connection connection = connectionHelper.getConnection();
+            Statement statement = connection.createStatement();
+            String sqlStatement =
+                    String.format("delete from student where id =%d", id);
+            statement.execute(sqlStatement);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

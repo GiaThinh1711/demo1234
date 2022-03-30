@@ -85,8 +85,8 @@ public class ProductModel {
     public boolean delete(int id){
         ConnectionHelper connectionHelper = new ConnectionHelper();
         try {
-            Connection connetion = connectionHelper.getConnection();
-            Statement statement = connetion.createStatement();
+            Connection connection = connectionHelper.getConnection();
+            Statement statement = connection.createStatement();
             String sqlStatement =
                     String.format("delete from product where id =%d", id);
             statement.execute(sqlStatement);
